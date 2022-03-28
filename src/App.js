@@ -36,8 +36,8 @@ const App = () => {
     <div className='App'>
       <div className='container'>
         <div className='advice-card'>
-          <h4 className='advice-header'>ADVICE #{data.slip.id}</h4>
-          <h2 className='advice-text'>"{data.slip.advice}"</h2>
+          <h4 className='advice-header'>ADVICE #{adviceID}</h4>
+          {loading ? <h2 className='advice-text'>"Loading advice..."</h2> : <h2 className='advice-text'>"{advice}"</h2>}
           {/* divider will render conditionally depending on screen size  */}
           <div className='divider-desktop'>
             <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg">
