@@ -2,10 +2,13 @@ import { render, screen } from '@testing-library/react';
 import userEvent from "@testing-library/user-event"
 import App from './App';
 
-test('upon clicking the advice button, a new advice is displayed', () => {
+test('advice is fetched on click of button', async () => {
   render(<App />);
 
-  const linkElement = screen.getByText(/learn react/i);
-  
-  expect(linkElement).toBeInTheDocument();
+  const adviceButton = screen.getByRole("button")
+
+  //button click
+  await userEvent.click(adviceButton)
+
+  // expect(adviceButton).toHaveReturned(data);
 });
