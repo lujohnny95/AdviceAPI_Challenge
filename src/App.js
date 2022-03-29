@@ -1,3 +1,4 @@
+import { Wrapper, Container, AdviceCard, AdviceTitle, AdviceText } from './App.styles';
 import './App.css';
 
 const fetchAdvice = async () => {
@@ -19,8 +20,8 @@ const App = () => {
         <div className='App'>
           <div className='container'>
             <div className="advice-card">
-              <h4 className="advice-header">ADVICE #{data.slip.id}</h4>
-              <h2 className="advice-text">"{data.slip.advice}"</h2>
+              <h4 className="advice-header" data-testID="advice-ID">ADVICE #{data.slip.id}</h4>
+              <h2 className="advice-text" data-testID="advice-text">"{data.slip.advice}"</h2>
               <div className="divider-desktop">
                 <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg">
                   <g fill="none" fill-rule="evenodd">
