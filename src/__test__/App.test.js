@@ -7,13 +7,10 @@ describe('Fetch Advice API', () => {
     render( <App /> );
     //querying the elements:
     const adviceTextElement = await screen.findByTestId(/advice-text/i);
-    const adviceID = await screen.findAllByTestId(/advice-ID/i);
-    const buttonElement = screen.getAllByRole("button");
+    const buttonElement = screen.getByRole("button");
     //user click event:
     fireEvent.click(buttonElement);
     //assertion, expected outcome: 
     expect(adviceTextElement).toBeInTheDocument();
-    expect(adviceID).toBeInTheDocument();
   })
-
 })

@@ -24,18 +24,12 @@ export const AdviceCard = styled.div`
     border-radius: 18px;
     position: relative;
     text-align: center;
-`;
+    
+    @media only screen and (max-width: 1150px) {
+        width: 50vw;
+    }
 
-export const AdviceTitle = styled.h4`
-    color: hsl(150, 100%, 66%);
-    font-size: 16px;
-    letter-spacing: 4px;
-    padding-top: 40px;
-`; 
-
-export const AdviceText = styled.h2`
-    color: hsl(193, 38%, 86%);
-    font-size: 28px;
-    padding: 10px 20px;
-    margin: 0 25px;
+    @media only screen and (max-width: 750px) {
+        width: 90vw;
+    }
 `;
